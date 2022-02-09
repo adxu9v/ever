@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+	* { margin: 0; padding: 0; list-style: none; }
+	#header1{width: 100%; height: 38px; border-bottom: 1px solid #aaa; background-color: #f5f5f5;}
+	#header1_box{width: 960px; height: 38px; margin: auto;}
+	#logo{width: 160px; height: 38px; float: left; }
+	#header1_menu{width: 500px; height: 38px; float: left;}
+	#header2_menu{width: 294px; height: 38px; float: right;}
+	#header2_menu>li{float: left;}
+	#header1_menu>li{float: left;}
+	#header1_menu>li:last-child{float: right; line-height: 38px;margin-right: 50px;}
+	#header2{width: 100%; height: 65px; border-bottom: 2px solid #000; overflow: hidden; position: relative;}
+	#header2_box{width: 960px; height: 65px;  position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+	#header2_left{width: 230px; height: 30px; background-color: #fff; border: 1px solid #aaa; float: left; margin-top: 17px;}
+	#header2_left>input{width: 200px; height: 20px; border: none; vertical-align: middle;}
+	#header2_left>img{vertical-align: middle; padding: 5px;}
+	#header2_logo{position: absolute; width: 115px; height: 50px; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+	#header2_right{width: 188px; float: right; margin-top: 18px;}
+	#header2_right>ul>li{float: left; color: #aaa; font-size: 14px;  font-weight: 100; text-align: center;}
+	#header2_right>ul>li>h5::after{content: "|"; margin: 0 5px;}
+	#header2_right>ul>li:last-child>h5::after{content: ""; margin-left: 0;}
+	#header3{width: 100%; height: 42px; border-bottom: 1px solid #000; position: relative;}
+	#header3_box{width: 960px; height: 42px; margin: auto;}
+	#header3_box>ul{width: 100%; text-align: center; line-height: 42px; }
+	#header3_box>ul>li{display: inline-block; margin: 0 5%;}
+	#header3>img{width: 24px; position: absolute; right: 35px; top: 0; bottom: 0; margin: auto;}
+	#slide{width: 100%; height: auto; background: url(images/slide3_bg.jpg) 0 center no-repeat; background-size: cover; border: 1px solid #000;}
+	#slide>img{width: 100%; margin: auto;}
+	#banner_notice{width: 1000px; height: 66px;background-color: #eee; margin: auto; text-align: center; line-height: 66px; margin-top: 70px; font-size: 16px; color: #666; word-spacing: -6px;}
+	#banner_notice>h2{font-weight: 700;}
+	#new{width: 1000px; margin: auto; border: 1px solid #000; overflow: hidden;}
+	#new_title{width: 1000px; height: 100px; text-align: center; margin-top: 35px; position: relative;}
+	#new_title>h2{font-size: 40px; font-weight: 900;}
+	#new_title>h4{font-size: 18px; font-weight: 300; margin-top: 5px;}
+	#new_line_left{position: absolute; left: 0; top: 40%; width: 30%; height: 2px; background-color: #000;}
+	#new_line_right{position: absolute; width: 30%; height: 2px; background-color: #000; right: 0; top: 40%;}
+	#new>ul>li{width: 235px; margin-right: 20px; float: left; text-align: center;}
+	#new>ul>li>h5{margin-top: 24px;}
+	#new>ul>li:nth-child(4n){margin-right: 0;}
+  </style> </head> <body>
+  <!-----header시작---------------------------------------------------------->
+		<header> 
+				<div id="header1"><!-- w100% h38 bdb -->
+					<div id="header1_box"><!-- w1000 h38 m:a  -->
+						<h1 id="logo"><img src="icons/main_logo.jpg" alt=""></h1>
+						<ul id="header1_menu">
+							<li><img src="icons/main_tab01_on.gif" alt=""></li>
+							<li><img src="icons/main_tab02_off.gif" alt=""></li>
+							<li><img src="icons/main_tab03_off.gif" alt=""></li>
+							<li><h5>汉语(简体)</h5></li>
+						</ul>
+						<ul id="header2_menu">
+							<li><img src="icons/btn_reserve02_new.gif" alt=""></li>
+							<li><img src="icons/btn_everedu_reserve.gif" alt=""></li>
+							<li><img src="icons/btn_workshop_reserve.gif" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				<div id="header2"><!-- w100% h65 bdb -->
+							<div id="header2_box"><!-- w1000 h65 m:a -->
+								<div id="header2_left"><input type="text"><img src="icons/KakaoTalk_20220209_143341696.jpg" alt=""></div>
+								<div id="header2_logo"><img src="icons/logo_01el.gif" alt=""></div>
+								<div id="header2_right"><ul>
+									<li><h5>로그인</h5></li>
+									<li><h5>회원가입</h5></li>
+									<li><h5>손님상담센터</h5></li>
+								</ul></div>
+							</div>
+				</div>
+				<div id="header3"><!-- w100% h42 bdb -->
+							<div id="header3_box"><!-- w1000 h42 m:a -->
+								<ul>
+									<li>이용정보</li>
+									<li>할인&이벤트</li>
+									<li>즐길거리</li>
+									<li>멤버십</li>
+									<li>에버랜드 더 알아보기</li>
+								</ul>
+								
+							</div>
+							<img src="icons/logo_magicseed.png" alt="">
+				</div>
+		</header>
+<!------slide 시작----------------------------------------------------------->
+	<div id="slide"><!-- w100% h570 bg  -->
+	 <!-- 배경이미지와 텍스트이미지로 분리되어 준비되어있다. 영역에 배경을 깔고 그위로 텍스트이미지가 올라오도록 삽입하자 -->
+			<img src="images/slide3_txt.png" alt="">
+	</div>
+<!------banner_notice 시작---------------------------------------------------------->
+	<div id="banner_notice"><!-- w1000 h66 bgc#eee m:a  -->
+		<h2>※코로나 바이러스 감염증-19 관련 이용 안내</h2>
+	</div>
+<!----------new시작---------------------------------------------------------->
+	<div id="new"><!-- w1000  -->
+			<div id="new_title">
+				<h2>What's New</h2>
+				<h4>꿈과 환상의 나라로 어서오세요!</h4>
+				<div id="new_line_left"></div>
+				<div id="new_line_right"></div>
+			</div><!-- w1000 h100 -->
+			<ul>
+				<li>
+					<img src="images/new_product5.jpg" alt="">
+					<h5>아기 호랑이</h5>
+					<p>어흥 스쿨!</p>
+				</li>
+				<li>
+					<img src="images/new_product2.jpg" alt="">
+					<h5>아름다운 나비와 함께</h5>
+					<p>미리 봄을 만나보세요</p>
+				</li>
+				<li>
+					<img src="images/new_product3.jpg" alt="">
+					<h5>겨울방학 시즌권</h5>
+					<p>전격 론칭!</p>
+				</li>
+				<li><img src="images/new_product4.jpg" alt="">
+					<h5>동물원 팬들 모여라!</h5>
+					<p>네이버 카페'주토피아' 오픈</p>
+				</li>
+				<li><img src="images/ad.jpg" alt="">
+					<h5>레니의 대모험!</h5>
+					<p>드래곤 성을 찾아서</p>
+				</li>
+				<li><img src="images/new_product6.jpg" alt="">
+					<h5>마법으로 수놓은 밤하늘</h5>
+					<p>로맨스 인 더 스카이</p>
+				</li>
+				<li><img src="images/new_product7.jpg" alt="">
+					<h5>서울대 멘토와 함께하는</h5>
+					<p>고교생활 멘토링 캠프</p>
+				</li>
+				<li><img src="images/new_product8.jpg
+					" alt="">
+					<h5>내가 직접 만드는</h5>
+					<p>가든 LED 대형 스크린 컨텐츠</p></li><!-- w1000  -->
+
+				 <!--w235 h250 mr20 mb40 -->
+				<!-- #new>ul>li:nth-child(4),#new>ul>li:nth-child(8) { mr0 }-->
+			</ul>
+	</div>
+<!--------ticket_promotion 시작----------------------------------------------------->
+<div id="ticket_promotion"><!-- w100% h537   -->
+			<div id="ticket_promotion_box"><!-- w1000 h537 m:a  -->
+						
+						<!-- w1000 h537 m:a  -->
+						
+			</div>
+</div>
+
+
+
+ </body>
+</html>
