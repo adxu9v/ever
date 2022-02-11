@@ -7,72 +7,80 @@
 	* { margin: 0; padding: 0; list-style: none; }
 	#header1{width: 100%; height: 38px; border-bottom: 1px solid #aaa; background-color: #f5f5f5;}
 	#header1_box{width: 960px; height: 38px; margin: auto;}
-	#logo{width: 160px; height: 38px; float: left; }
+	#logo{width: 160px; height: 38px; float: left; cursor: pointer;}
 	#header1_menu{width: 500px; height: 38px; float: left;}
 	#header2_menu{width: 294px; height: 38px; float: right;}
-	#header2_menu>li{float: left;}
-	#header1_menu>li{float: left;}
+	#header2_menu>li{float: left; cursor: pointer;}
+	#header1_menu>li{float: left; cursor: pointer;}
 	#header1_menu>li:last-child{float: right; line-height: 38px;margin-right: 50px;}
 	#header2{width: 100%; height: 65px; border-bottom: 2px solid #000; overflow: hidden; position: relative;}
 	#header2_box{width: 960px; height: 65px;  position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
 	#header2_left{width: 230px; height: 30px; background-color: #fff; border: 1px solid #aaa; float: left; margin-top: 17px;}
 	#header2_left>input{width: 200px; height: 20px; border: none; vertical-align: middle;}
 	#header2_left>img{vertical-align: middle; padding: 5px;}
-	#header2_logo{position: absolute; width: 115px; height: 50px; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+	#header2_logo{position: absolute; width: 115px; height: 50px; left: 0; right: 0; top: 0; bottom: 0; margin: auto; cursor: pointer;}
 	#header2_right{width: 188px; float: right; margin-top: 18px;}
-	#header2_right>ul>li{float: left; color: #aaa; font-size: 14px;  font-weight: 100; text-align: center;}
+	#header2_right>ul>li{float: left; color: #aaa; font-size: 14px;  font-weight: 100; text-align: center; cursor: pointer;}
 	#header2_right>ul>li>h5::after{content: "|"; margin: 0 5px;}
 	#header2_right>ul>li:last-child>h5::after{content: ""; margin-left: 0;}
 	#header3{width: 100%; height: 42px; border-bottom: 1px solid #000; position: relative;}
 	#header3_box{width: 960px; height: 42px; margin: auto;}
 	#header3_box>ul{width: 100%; text-align: center; line-height: 42px; }
-	#header3_box>ul>li{display: inline-block; margin: 0 5%;}
+	#header3_box>ul>li{display: inline-block; padding: 0 5%; cursor: pointer;}
+	#header3_box>ul>li:hover{background-color: cyan;}
 	#header3>img{width: 24px; position: absolute; right: 35px; top: 0; bottom: 0; margin: auto;}
 	#slide{width: 100%; height: auto; background: url(images/slide3_bg.jpg) 0 center no-repeat; background-size: cover; border: 1px solid #000;}
 	#slide>img{width: 100%; margin: auto;}
-	#banner_notice{width: 1000px; height: 66px;background-color: #eee; margin: auto; text-align: center; line-height: 66px; margin-top: 70px; font-size: 16px; color: #666; word-spacing: -6px;}
+	#banner_notice{width: 1000px; height: 66px;background-color: #eee; margin: auto; text-align: center; line-height: 66px; margin-top: 70px; font-size: 16px; color: #666; word-spacing: -6px; cursor: pointer;}
 	#banner_notice>h2{font-weight: 700;}
-	#new{width: 1000px; height: 788px; margin: auto; border: 1px solid #000; overflow: hidden; position: relative;}
+	#new{width: 1000px; height: 788px; margin: auto; overflow: hidden; position: relative;}
 	#new_title{width: 1000px; height: 100px; text-align: center; margin-top: 35px; position: relative;}
 	#new_title>h2{font-size: 40px; font-weight: 900;}
 	#new_title>h4{font-size: 18px; font-weight: 300; margin-top: 5px;}
 	.line_left{position: absolute; left: 0; top: 40%; width: 27%; height: 2px; background-color: #000;}
 	.line_right{position: absolute; width: 27%; height: 2px; background-color: #000; right: 0; top: 40%;}
 	#new>ul{margin-top: 28px;}
-	#new>ul>li{width: 235px; height: 290px; margin-right: 20px; float: left; text-align: center;}
+	#new>ul>li{width: 235px; margin-right: 20px;  padding-bottom: 20px; margin-bottom: 40px; float: left; text-align: center; cursor: pointer;}
+	#new>ul>li>div>img{transition: 0.2s; vertical-align: top;}
+	#new>ul>li:hover>div>img{transform: scale(1.03);}
 	#new>ul>li>h5{margin-top: 24px;}
 	#new>ul>li:nth-child(4n){margin-right: 0;}
-	#ticket_promotion{width: 100%; height: 536px; background-color: #f7f7f7;}
-	#ticket_promotion_box{width: 1000px; height: 536px; border: 1px solid #000; margin: auto; text-align: center;}
+	.ovh{overflow: hidden;}
+	.ovh>img{vertical-align: top; transition: 0.2s;}
+	#ticket_promotion{width: 100%; height: 536px; background-color: #f7f7f7; overflow: hidden;}
+	#ticket_promotion_box{width: 1000px; height: 536px; margin: auto; text-align: center;}
 	#ticket_promotion_box>h2{margin-top: 50px; font-size: 40px; font-weight: 900;}
 	#ticket_promotion_box>h5{font-size: 16px; font-weight: 300; margin-top: 5px;}
-	#ticket_promotion_box>ul{margin-top: 40px;}
-	#ticket_promotion_box>ul>li{width: 20%; height: 228px; border-top: 1px solid #000; border-bottom: 1px solid #000; box-sizing: border-box; float: left;}
+	#ticket_promotion_box>ul{margin-top: 40px; height: 228px; border: 1px solid #ccc;}
+	#ticket_promotion_box>ul>li{width: 20%; height: 228px;box-sizing: border-box; float: left; cursor: pointer; position: relative;}
+	#ticket_promotion_box>ul>li::after{content: ""; height: 200px; width: 1px; background-color: #aaa; position: absolute; top: 14px; right: 0;}
+	#ticket_promotion_box>ul>li:last-child::after{content: ""; width: 1px; height: 200px; position: absolute; top: 14px; right: 0; background-color: #f7f7f7; }
 	#ticket_promotion_box>ul>li>h5{margin-top: 19px;}
 	#ticket_promotion_box>ul>li>img{width: 62px; margin-top: 18px; vertical-align: top;}
 	#ticket_promotion_box>ul>li>h4{margin-top: 15px;}
 	#ticket_promotion_box>ul>li>p{margin-top: 8px; color: #ff4c2b; font-size: 14px; font-weight: 700; letter-spacing: -1px;}
-	#ticket_btn{border: 1px solid #ff4c1c; font-weight: 700; letter-spacing: -1px; margin-top: 25px; background-color: #fbf5f3; display: inline-block; padding: 12px 45px; border-radius: 80px;}
+	#ticket_btn{border: 1px solid #ff4c1c; font-weight: 700; letter-spacing: -1px; margin-top: 25px; background-color: #fbf5f3; display: inline-block; padding: 12px 45px; border-radius: 80px; cursor: pointer;}
 	#ticket_btn>img{margin-bottom: 3px; margin-left: 5px;}
-	#fun{width: 100%; height: 490px; background: url(images/joy_bg.jpg);}
-	#fun_box{width: 1000px; height: 100%; border: 1px solid #000; margin: auto; text-align: center;}
+	#fun{width: 100%; height: 490px; background: url(images/joy_bg.jpg); overflow: hidden;}
+	#fun_box{width: 1000px; height: 100%;margin: auto; text-align: center;}
 	#fun_title{margin-top: 70px; position: relative;}
 	#fun_box>ul{margin-top: 50px;}
-	#fun_box>ul>li{float: left; width: 235px; margin-right: 20px;}
+	#fun_box>ul>li{float: left; width: 235px; margin-right: 20px; cursor: pointer;}
 	#fun_box>ul>li:last-child{margin-right: 0;}
 	#fun_box>ul>li>h5{margin-top: 20px;}
 	#fun_box>ul>li>p{margin-top: 5px; font-size: 14px;}
+	#fun_box>ul>li:hover img{transform: scale(1.02);}
 	#information{width: 100%; height: 737px;  text-align: center; background-color: #f4f3f0;}
-	#information_box{width: 1000px; margin: auto; border: 1px solid #000; overflow: hidden;}
+	#information_box{width: 1000px; margin: auto; overflow: hidden;}
 	#information_box>h2{margin-top: 60px; font-size: 40px;}
 	#information_box>h5{margin-top: 10px; font-size: 16px; font-weight: 300;}
 	#information_box>ul{margin-top: 50px;}
-	#information_box>ul>li{float: left; width: 324.33px; height: 500px; margin-right: 9px; border: 1px solid #666; border-top: 1px solid #ff4c1c; background-color: #fff;}
-	#information_box>ul>li:last-child{margin-right: 0; color: #fff; background-color: #f4f3f0;}
+	#information_box>ul>li{float: left; width: 324.33px; height: 500px; margin-right: 9px; border: 1px solid #ccc; border-top: 1px solid #ff4c1c; background-color: #fff;}
+	#information_box>ul>li:last-child{margin-right: 0; color: #fff; background-color: #f4f3f0; border: none;}
 	#information_box>ul>li>h3{margin-top: 20px; font-size: 28px; font-weight: 900; letter-spacing: -1px;}
 	#information_box>ul>li>h5{margin-top: 5px; font-size: 14px;}
 	#news_notice{width: 90%; font-size: 14px; margin: auto; margin-top: 36px; text-align: left; border-top: 1px solid #000; border-bottom: 1px solid #000; font-weight: 700;}
-	#news_notice>li{border-bottom: 1px solid #aaa; padding: 14px 0;}
+	#news_notice>li{border-bottom: 1px solid #aaa; padding: 14px 0; cursor: pointer;}
 	#news_notice>li:last-child{border-bottom: none;}
 	#today_list>h3{border-top: 1px solid #000; width: 90%; margin: auto; margin-top: 35px; padding-top: 20px;}
 	#today_list>h4{font-size: 40px; color: #ff4c1c;}
@@ -82,14 +90,14 @@
 	#today_time_left>li>img{vertical-align: top; margin-left: 10px;}
 	#today_time_right{float: right;}
 	#today_time_right>li{margin-bottom: 16px; margin-right: 30px; text-align: left;}
-	#today>p{border: 1px solid #ff4c1c; display: inline-block; margin-top: 50px; border-radius: 20px; padding: 10px; font-size: 14px; color: #ff4c1c; font-weight: 700;}
+	#today>p{border: 1px solid #ff4c1c; display: inline-block; margin-top: 50px; border-radius: 20px; padding: 10px; font-size: 14px; color: #ff4c1c; font-weight: 700; cursor: pointer;}
 	#today>p:last-child{border: 1px solid #6a2c81; color: #6a2c81;}
 	#today_smart{width: 100%; height: 500px;}
-	#today_smart_top{width: 100%; height: 372px;  margin-bottom: 10px; background-color: #fff;}
+	#today_smart_top{width: 100%; height: 372px;  margin-bottom: 10px; background-color: #fff; border: 1px solid #ccc; border-bottom: none; box-sizing: border-box;}
 	#today_smart_top>div{width: 100%; height: 120px; background-color: #ff4c1c; overflow: hidden;}
 	#today_smart_top>div>h3{margin-top: 30px; font-size: 24px;}
 	#today_smart_top>div>h5{margin-top: 5px;}
-	#today_smart_top>ul>li{height: 84px; box-sizing: border-box; border-bottom: 1px solid #aaa; color: #000;}
+	#today_smart_top>ul>li{height: 84px; box-sizing: border-box; border-bottom: 1px solid #aaa; color: #000; cursor: pointer;}
 	.bdra{border-right: 1px solid #aaa;}
 	#today_smart_top>ul>li>p{display: inline-block;  vertical-align: middle;}
 	#today_smart_top>ul>li>img{margin-top: 20px;}
@@ -98,33 +106,42 @@
 	.today_smart_top_box>img{float: left; margin-right: 10px;}
 	.today_smart_top_box>p{float: right;}
 	.lh_40{ line-height: 40px;}
-	#today_smart_bottom{width: 100%; height: 120px; color: #000; overflow: hidden; background-color: #fff;}
+	#today_smart_bottom{width: 100%; height: 120px; color: #000; overflow: hidden; background-color: #fff; border: 1px solid #ccc; box-sizing: border-box; cursor: pointer;}
 	#today_smart_bottom_box{margin-top: 20px;}
 	#today_smart_bottom_box>img{float: left; margin-left: 20px;}
 	#today_smart_bottom_box>p{float: left; margin-top: 20px; margin-left: 10px;}
 	#today_smart_bottom_box>p>span{color: #6a2c81;}
 	#editor{width: 100%; height: 1050px; background-color: #fff; text-align: center; overflow: hidden;}
-	#editor_box{width: 1000px; height: 100%; border: 1px solid #000; margin: auto; margin-top: 20px;}
+	#editor_box{width: 1000px; height: 100%; margin: auto; margin-top: 20px;}
 	#editor_clip_box{position: relative; margin-top: 40px;}
 	#editor_clip_box>h2{font-size: 40px; font-weight: 900;}
 	#editor_clip_box>p{font-size: 16px; margin-top: 10px;}
 	#editor_clip_list{width: 100%; overflow: hidden; margin-top: 45px;}
 	#editor_clip_list>li>p{padding: 20px 0 70px 0;}
-	#editor_clip_list>li>img{border-radius: 100px; }
 	#editor_clip_list>li{width: 216px;  float: left; box-sizing: border-box; margin-right: 45px;}
 	#editor_clip_list>li:nth-child(4n){margin-right: 0;}
-	#clip_btn{border: 1px solid #000; display: inline-block; padding:15px 15px; border-radius: 50px; word-spacing: -3px;}
+	#editor_clip_list>li:hover img{transform: scale(1.05);}
+	.editor_image_hover_box{width: 216px; border-radius: 300px;  border: 1px solid #000; overflow: hidden;}
+	.editor_image_hover_box>img{border-radius: 200px; vertical-align: top; transition: 0.2s;}
+	#clip_btn{border: 1px solid #000; display: inline-block; padding:15px 15px; border-radius: 50px; word-spacing: -3px; cursor: pointer;}
 	#clip_btn>img{vertical-align: top; margin-top: 5px; margin-left: 5px;}
 	footer{width: 100%; height: 190px;}
-
-	#footer_top{width: 100%; height: 45px; border-top: 1px solid #aaa; background-color: #f4f3f0;}
-	#footer_top_box{width: 960px; height: 100%; margin: auto; border: 1px solid #000;}
+	#footer_top{width: 100%; height: 46px; border-top: 1px solid #aaa; background-color: #f4f3f0;}
+	#footer_top_box{width: 960px; height: 100%; margin: auto; overflow: hidden;}
 	#footer_bottom{width: 100%; height: 144px; background-color: #444b55;}
-	#footer_bottom_box{width: 1000px; height: 100%; margin: auto; border: 1px solid #000;}
-	#footer_top_box>ul{}
-	#footer_top_box>ul>li{float: left;}
-	#footer_top_image_box{float: right; margin-top: 5px;}
-	#footer_top_image_box>img{float: left; margin-left: 10px;}
+	#footer_bottom_box{width: 960px; height: 100%; margin: auto;}
+	#footer_top_box>ul>li{float: left; cursor: pointer;}
+	#footer_top_image_box{float: right; margin-top: 7px;}
+	#footer_top_image_box>img{float: left; margin-left: 10px; cursor: pointer;}
+	#footer_bottom_box>ul{float: left; font-size: 11px; font-weight: 100; color: #aaa; margin-top: 20px;}
+	#footer_bottom_box>ul>li{float: left; margin-right: 10px; cursor: pointer;}
+	#footer_bottom_box>ul>li:nth-child(n+4){color: #fff; font-weight: 400;}
+	#footer_bottom_box>ul>li::after{content: "|"; margin-left: 10px;}
+	#footer_bottom_box>ul>li:last-child::after{content: "";}
+	address{float: left; font-size: 11px; font-weight: 100; color: #aaa; margin-top: 10px; line-height: 20px;}
+	address>span{color: #fff; font-weight: 400; cursor: pointer;}
+	#footer_bottom_image_box{width: 80px; height: 70px; float: right; background-color: #fff; border-radius: 5px; position: relative; margin-right: 105px; margin-top: 20px; cursor: pointer;}
+	#footer_bottom_image_box>img{width: 70px; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto;}
 
   </style> </head> <body>
   <!-----header시작---------------------------------------------------------->
@@ -188,39 +205,44 @@
 				<div class="line_right"></div>
 			</div><!-- w1000 h100 -->
 			<ul>
-				<li>
-					<img src="images/new_product5.jpg" alt="">
+				<li><div class="ovh"><img src="images/new_product5.jpg" alt="" class=""></div>
+					
 					<h5>아기 호랑이</h5>
 					<p>어흥 스쿨!</p>
 				</li>
-				<li>
-					<img src="images/new_product2.jpg" alt="">
+				<li><div class="ovh"><img src="images/new_product2.jpg" alt=""></div>
+					
 					<h5>아름다운 나비와 함께</h5>
 					<p>미리 봄을 만나보세요</p>
 				</li>
-				<li>
-					<img src="images/new_product3.jpg" alt="">
+				<li><div class="ovh"><img src="images/new_product3.jpg" alt=""></div>
+					
 					<h5>겨울방학 시즌권</h5>
 					<p>전격 론칭!</p>
 				</li>
-				<li><img src="images/new_product4.jpg" alt="">
+				<li><div class="ovh"><img src="images/new_product4.jpg" alt=""></div>
+					
 					<h5>동물원 팬들 모여라!</h5>
 					<p>네이버 카페'주토피아' 오픈</p>
 				</li>
-				<li><img src="images/ad.jpg" alt="">
+				<li><div class="ovh"><img src="images/ad.jpg" alt=""></div>
+					
 					<h5>레니의 대모험!</h5>
 					<p>드래곤 성을 찾아서</p>
 				</li>
-				<li><img src="images/new_product6.jpg" alt="">
+				<li><div class="ovh"><img src="images/new_product6.jpg" alt=""></div>
+					
 					<h5>마법으로 수놓은 밤하늘</h5>
 					<p>로맨스 인 더 스카이</p>
 				</li>
-				<li><img src="images/new_product7.jpg" alt="">
+				<li><div class="ovh"><img src="images/new_product7.jpg" alt=""></div>
+					
 					<h5>서울대 멘토와 함께하는</h5>
 					<p>고교생활 멘토링 캠프</p>
 				</li>
-				<li><img src="images/new_product8.jpg
-					" alt="">
+				<li><div class="ovh"><img src="images/new_product8.jpg
+					" alt=""></div>
+					
 					<h5>내가 직접 만드는</h5>
 					<p>가든 LED 대형 스크린 컨텐츠</p></li><!-- w1000  -->
 
@@ -278,23 +300,23 @@
 				<div class="line_right"></div>
 			</div>
 			<ul>
-				<li>
-					<img src="images/joy1.jpg" alt="">
+				<li><div class="ovh"><img src="images/joy1.jpg" alt=""></div>
+					
 					<h5>직접 줄서지 않고</h5>
 					<p>스마트 줄서기</p>
 				</li>
-				<li>
-					<img src="images/joy2.jpg" alt="">
+				<li><div class="ovh"><img src="images/joy2.jpg" alt=""></div>
+					
 					<h5>편하고 여유있게</h5>
 					<p>모바일 오더</p>
 				</li>
-				<li>
-					<img src="images/joy3.jpg" alt="">
+				<li><div class="ovh"><img src="images/joy3.jpg" alt=""></div>
+					
 					<h5>마음을 담아 선물하세요</h5>
 					<p>모바일 기프트카트</p>
 				</li>
-				<li>
-					<img src="images/joy4.jpg" alt="">
+				<li><div class="ovh"><img src="images/joy4.jpg" alt=""></div>
+					
 					<h5>무궁이태범이</h5>
 					<p>카카오톡 이모티콘 출시</p>
 				</li>
@@ -405,35 +427,43 @@
 			</div>
 			<ul id="editor_clip_list">
 				<li>
-					<img src="images/editor_clip1.jpg" alt="">
+					<div class="editor_image_hover_box"><img src="images/editor_clip1.jpg" alt=""></div>
+					
 					<p>500일 맞이한 푸바오 <br> 백신 맞는 아기판다!</p>
 				</li>
 				<li>
-					<img src="images/editor_clip2.jpg" alt="">
+					<div class="editor_image_hover_box"><img src="images/editor_clip2.jpg" alt=""></div>
+					
 					<p>우리집 식물 <br> 월동준비 TIP!</p>
 				</li>
 				<li>
-					<img src="images/editor_clip3.jpg" alt="">
+					<div class="editor_image_hover_box"><img src="images/editor_clip3.jpg" alt=""></div>
+					
 					<p>스스로 퇴근 성공? <br> 푸바오는 사춘기</p>
 				</li>
 				<li>
-					<img src="images/editor_clip4.jpg" alt="">
+					<div class="editor_image_hover_box"><img src="images/editor_clip4.jpg" alt=""></div>
+					
 					<p>설원의 지휘자 <br> 한국호랑이의 멋</p>
 				</li>
 				<li>
-					<img src="images/editor_clip5.jpg" alt="">
+					<div class="editor_image_hover_box"><img src="images/editor_clip5.jpg" alt=""></div>
+					
 					<p>200만뷰 화제의 영상 <br> T-EXP CAST 따라잡기</p>
 				</li>
 				<li>
-					<img src="images/editor_clip6.jpg" alt="">
+					<div class="editor_image_hover_box"><img src="images/editor_clip6.jpg" alt=""></div>
+					
 					<p>환상의 라이팅쇼 <br> 빛의 심포니</p>
 				</li>
 				<li>
-					<img src="images/editor_clip7.jpg" alt="">
+					<div class="editor_image_hover_box"><img src="images/editor_clip7.jpg" alt=""></div>
+					
 					<p>에버랜드에서 뭐 먹지? <br> 겨울철 간식 소개</p>
 				</li>
 				<li>
-					<img src="images/editor_clip8.jpg" alt="">
+					<div class="editor_image_hover_box"><img src="images/editor_clip8.jpg" alt=""></div>
+					
 					<p>에버랜드가 전하는 응원 <br> #덕분에챌린지 #국민덕분에</p>
 				</li>
 			</ul>
@@ -461,9 +491,26 @@
 				</div>
 			</div>
 			<div id="footer_bottom">
-				<div id="footer_bottom_box"></div>
+				<div id="footer_bottom_box">
+					<ul>
+						<li>에버랜드 리조트 소개</li>
+						<li>이용약관</li>
+						<li>이메일주소 무단수집 거부</li>
+						<li>채용</li>
+						<li>캐스트참여</li>
+						<li>사이트맵</li>
+					</ul>
+					<div id="footer_bottom_image_box"><img src="icons/btn_allatescow.gif" alt=""></div>
+					<address>
+						경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주) <br>
+대표이사 : 한승환 | 사업자등록번호 : 135-85-04288 | 통신판매업 신고번호 : 제2006-용인처인-0216호 | 사업자정보확인▶ <br>
+손님상담센터 : 031-320-5000(유료)  | <span>개인정보처리방침 | 방침 개정 안내 | 입찰공고 </span><br>
+Copyright © Samsung C&T Corporation. All rights reserved.
+					</address>
+					
+				</div>
 			</div>
-
+			
 	</footer>
  </body>
 </html>
