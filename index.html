@@ -21,6 +21,30 @@
 		  $('#footer_top_image2').click(function(){
 			  $('#footer_top_hover_list_right').toggle();
 		  })
+		  $(window).scroll(function(){
+			  if($(window).scrollTop()>800){
+				  $('#new_side_box').css({'position':'fixed','top':'100px', 'right':'20px'})
+				  
+			  }
+			  if($(this).scrollTop() > 1200 && $(this).scrollTop() < 1700){
+				$('#new_slide>li:nth-child(2)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#fff','color':'#000'})
+			  }
+			  if($(this).scrollTop() > 1700 && $(this).scrollTop() < 2000){
+				$('#new_slide>li:nth-child(3)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#fff','color':'#000'})
+			  }
+			  if($(this).scrollTop() > 2000 && $(this).scrollTop() < 2300){
+				$('#new_slide>li:nth-child(3)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#fff','color':'#000'})
+			  }
+			  if($(this).scrollTop() > 2300 && $(this).scrollTop() < 2700){
+				$('#new_slide>li:nth-child(4)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#fff','color':'#000'})
+			  }
+			  if($(this).scrollTop() > 2700){
+				$('#new_slide>li:nth-child(5)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#fff','color':'#000'})
+			  }
+
+			  else if($(window).scrollTop()<800){$('#new_side_box').css({'position':'absolute','right':'20px'})
+			  $('#new_slide>li:nth-child(1)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#fff','color':'#000'})}
+		  })
 	  })
   </script>
   <style>
@@ -59,8 +83,9 @@
 	#slide>img{width: 100%; margin: auto;}
 	#banner_notice{width: 1000px; height: 66px;background-color: #eee; margin: auto; text-align: center; line-height: 66px; margin-top: 70px; font-size: 16px; color: #666; word-spacing: -6px; cursor: pointer;}
 	#banner_notice>h2{font-weight: 700;}
+	#new_box{width: 100%; height: 788px; position: relative;}
 	#new{width: 1000px; height: 788px; margin: auto; position: relative;}
-	#new_side_box{width: 95px; height: 515px; position: absolute; top: 0; left: calc(100% + 55px);}
+	#new_side_box{width: 95px; height: 515px; position: absolute;  top: 0; right: 20px;}
 	#new_slide>li{width: 95px; height: 95px; top: 0; left: 0; background-color:  #eee; border-radius: 100px; margin-bottom: 5px; text-align: center; font-size: 13px; display: inline-block; position: relative; color: #666;}
 	#new_slide>li>p{ position: absolute; top: 50%; left: 0; right: 0; margin: auto; transform: translateY(-50%);}
 	#new_slide>li:first-child{background-color: rgb(255, 94, 0); color: #fff;}
@@ -97,7 +122,6 @@
 	#fun{width: 100%; height: 490px; background: url(images/joy_bg.jpg); overflow: hidden;}
 	#fun_box{width: 1000px; height: 100%;margin: auto; text-align: center;}
 	#fun_title{margin-top: 70px; position: relative;}
-	#fun_title>img{}
 	#fun_box>ul{margin-top: 50px;}
 	#fun_box>ul>li{float: left; width: 235px; margin-right: 20px; cursor: pointer;}
 	#fun_box>ul>li:last-child{margin-right: 0;}
@@ -168,8 +192,8 @@
 	#footer_top_image_box{float: right; margin-top: 7px; position: relative; }
 	#footer_top_image_box>img{float: left; margin-left: 10px; cursor: pointer;}
 	#footer_top_image_box>img:first-child{margin-left: 0;}
-	#footer_top_hover_list_left{width: 137px; background-color: #fff; border: 1px solid #eee; padding: 10px; box-sizing: border-box; position: absolute; bottom: 100%; left: 0; display: none;}
-	#footer_top_hover_list_right{width: 188px; background-color: #fff; border: 1px solid #eee; padding: 10px; box-sizing: border-box; position: absolute; bottom: 100%; right: 0; display: none;}
+	#footer_top_hover_list_left{width: 137px; background-color: #fff; border: 1px solid #eee; padding: 10px; font-size: 12px; color: #666; box-sizing: border-box; position: absolute; bottom: 100%; left: 0; display: none;}
+	#footer_top_hover_list_right{width: 188px; background-color: #fff; border: 1px solid #eee; font-size: 12px; color: #666; padding: 10px; box-sizing: border-box; position: absolute; bottom: 100%; right: 0; display: none;}
 	#footer_bottom_box>ul{float: left; font-size: 11px; font-weight: 100; color: #aaa; margin-top: 20px;}
 	#footer_bottom_box>ul>li{float: left; margin-right: 10px; cursor: pointer;}
 	#footer_bottom_box>ul>li:nth-child(n+4){color: #fff; font-weight: 400;}
@@ -245,79 +269,80 @@
 		</div>
 	</div>
 <!------banner_notice 시작---------------------------------------------------------->
-	<div id="banner_notice"><!-- w1000 h66 bgc#eee m:a  -->
-		<h2>※코로나 바이러스 감염증-19 관련 이용 안내</h2>
-	</div>
+<div id="new_box"><div id="banner_notice"><!-- w1000 h66 bgc#eee m:a  -->
+	<h2>※코로나 바이러스 감염증-19 관련 이용 안내</h2>
+</div>
+<div id="new_side_box">
+	<ul id="new_slide">
+		<li><p>What’s <br>
+			New <br>
+			신규 즐길거리</p></li>
+		<li><p>Promotion <br>
+			오늘의 할인</p></li>
+		<li><p>에버랜드 <br>
+			정보 꿀팁</p></li>
+		<li><p>Information <br>
+			운영정보</p></li>
+		<li><p>Editor’s <br>
+			Clip <br>
+			추천 꿀팁</p></li>
+	</ul>
+</div>
 <!----------new시작---------------------------------------------------------->
-	<div id="new">
-		<div id="new_side_box">
-			<ul id="new_slide">
-				<li><p>What’s <br>
-					New <br>
-					신규 즐길거리</p></li>
-				<li><p>Promotion <br>
-					오늘의 할인</p></li>
-				<li><p>에버랜드 <br>
-					정보 꿀팁</p></li>
-				<li><p>Information <br>
-					운영정보</p></li>
-				<li><p>Editor’s <br>
-					Clip <br>
-					추천 꿀팁</p></li>
-			</ul>
-		</div><!-- w1000  -->
-			<div id="new_title">
-				<h2>What's New</h2>
-				<h4>꿈과 환상의 나라로 어서오세요!</h4>
-				<div class="line_left"></div>
-				<div class="line_right"></div>
-			</div><!-- w1000 h100 -->
-			<ul>
-				<li><div class="ovh"><img src="images/new_product5.jpg" alt="" class=""></div>
-					
-					<h5>아기 호랑이</h5>
-					<p>어흥 스쿨!</p>
-				</li>
-				<li><div class="ovh"><img src="images/new_product2.jpg" alt=""></div>
-					
-					<h5>아름다운 나비와 함께</h5>
-					<p>미리 봄을 만나보세요</p>
-				</li>
-				<li><div class="ovh"><img src="images/new_product3.jpg" alt=""></div>
-					
-					<h5>겨울방학 시즌권</h5>
-					<p>전격 론칭!</p>
-				</li>
-				<li><div class="ovh"><img src="images/new_product4.jpg" alt=""></div>
-					
-					<h5>동물원 팬들 모여라!</h5>
-					<p>네이버 카페'주토피아' 오픈</p>
-				</li>
-				<li><div class="ovh"><img src="images/ad.jpg" alt=""></div>
-					
-					<h5>레니의 대모험!</h5>
-					<p>드래곤 성을 찾아서</p>
-				</li>
-				<li><div class="ovh"><img src="images/new_product6.jpg" alt=""></div>
-					
-					<h5>마법으로 수놓은 밤하늘</h5>
-					<p>로맨스 인 더 스카이</p>
-				</li>
-				<li><div class="ovh"><img src="images/new_product7.jpg" alt=""></div>
-					
-					<h5>서울대 멘토와 함께하는</h5>
-					<p>고교생활 멘토링 캠프</p>
-				</li>
-				<li><div class="ovh"><img src="images/new_product8.jpg
-					" alt=""></div>
-					
-					<h5>내가 직접 만드는</h5>
-					<p>가든 LED 대형 스크린 컨텐츠</p></li><!-- w1000  -->
+<div id="new"><!-- w1000  -->
+		<div id="new_title">
+			<h2>What's New</h2>
+			<h4>꿈과 환상의 나라로 어서오세요!</h4>
+			<div class="line_left"></div>
+			<div class="line_right"></div>
+		</div><!-- w1000 h100 -->
+		<ul>
+			<li><div class="ovh"><img src="images/new_product5.jpg" alt="" class=""></div>
+				
+				<h5>아기 호랑이</h5>
+				<p>어흥 스쿨!</p>
+			</li>
+			<li><div class="ovh"><img src="images/new_product2.jpg" alt=""></div>
+				
+				<h5>아름다운 나비와 함께</h5>
+				<p>미리 봄을 만나보세요</p>
+			</li>
+			<li><div class="ovh"><img src="images/new_product3.jpg" alt=""></div>
+				
+				<h5>겨울방학 시즌권</h5>
+				<p>전격 론칭!</p>
+			</li>
+			<li><div class="ovh"><img src="images/new_product4.jpg" alt=""></div>
+				
+				<h5>동물원 팬들 모여라!</h5>
+				<p>네이버 카페'주토피아' 오픈</p>
+			</li>
+			<li><div class="ovh"><img src="images/ad.jpg" alt=""></div>
+				
+				<h5>레니의 대모험!</h5>
+				<p>드래곤 성을 찾아서</p>
+			</li>
+			<li><div class="ovh"><img src="images/new_product6.jpg" alt=""></div>
+				
+				<h5>마법으로 수놓은 밤하늘</h5>
+				<p>로맨스 인 더 스카이</p>
+			</li>
+			<li><div class="ovh"><img src="images/new_product7.jpg" alt=""></div>
+				
+				<h5>서울대 멘토와 함께하는</h5>
+				<p>고교생활 멘토링 캠프</p>
+			</li>
+			<li><div class="ovh"><img src="images/new_product8.jpg
+				" alt=""></div>
+				
+				<h5>내가 직접 만드는</h5>
+				<p>가든 LED 대형 스크린 컨텐츠</p></li><!-- w1000  -->
 
-				 <!--w235 h250 mr20 mb40 -->
-				<!-- #new>ul>li:nth-child(4),#new>ul>li:nth-child(8) { mr0 }-->
-			</ul>
-	</div>
+			 <!--w235 h250 mr20 mb40 -->
+			<!-- #new>ul>li:nth-child(4),#new>ul>li:nth-child(8) { mr0 }-->
+		</ul>
+</div></div>	
+
 <!--------ticket_promotion 시작----------------------------------------------------->
 	<div id="ticket_promotion"><!-- w100% h537   -->
 		<div id="ticket_promotion_box"><!-- w1000 h537 m:a  -->
