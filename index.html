@@ -15,6 +15,12 @@
 				$(this).css({'transform':'transformX(20px)'})
 			})
 		  })
+		  $('#footer_top_image1').click(function(){
+			  $('#footer_top_hover_list_left').toggle();
+		  })
+		  $('#footer_top_image2').click(function(){
+			  $('#footer_top_hover_list_right').toggle();
+		  })
 	  })
   </script>
   <style>
@@ -41,7 +47,7 @@
 	#header3_box{width: 960px; height: 42px; margin: auto;}
 	#header3_box>ul{width: 100%; text-align: center; line-height: 42px; }
 	#header3_box>ul>li{display: inline-block; padding: 0 5%; cursor: pointer;}
-	#header3_box>ul>li:hover{background-color: cyan;}
+	#header3_box>ul>li:hover{background-color: rgb(255, 94, 0); color: #fff;}
 	#header3>img{width: 24px; position: absolute; right: 35px; top: 0; bottom: 0; margin: auto;}
 	#slide{width: 100%; height: auto; background: url(images/slide3_bg.jpg) 0 center no-repeat; background-size: cover; border: 1px solid #000; cursor: pointer;}
 	#slide_btn{width: 350px; height: 50px; margin: auto; margin-bottom: 10px;}
@@ -53,7 +59,12 @@
 	#slide>img{width: 100%; margin: auto;}
 	#banner_notice{width: 1000px; height: 66px;background-color: #eee; margin: auto; text-align: center; line-height: 66px; margin-top: 70px; font-size: 16px; color: #666; word-spacing: -6px; cursor: pointer;}
 	#banner_notice>h2{font-weight: 700;}
-	#new{width: 1000px; height: 788px; margin: auto; overflow: hidden; position: relative;}
+	#new{width: 1000px; height: 788px; margin: auto; position: relative;}
+	#new_side_box{width: 95px; height: 515px; position: absolute; top: 0; left: calc(100% + 55px);}
+	#new_slide>li{width: 95px; height: 95px; top: 0; left: 0; background-color:  #eee; border-radius: 100px; margin-bottom: 5px; text-align: center; font-size: 13px; display: inline-block; position: relative; color: #666;}
+	#new_slide>li>p{ position: absolute; top: 50%; left: 0; right: 0; margin: auto; transform: translateY(-50%);}
+	#new_slide>li:first-child{background-color: rgb(255, 94, 0); color: #fff;}
+	#new_slide>li:last-child{margin-bottom: 0;}
 	#new_title{width: 1000px; height: 100px; text-align: center; margin-top: 35px; position: relative;}
 	#new_title>h2{font-size: 40px; font-weight: 900;}
 	#new_title>h4{font-size: 18px; font-weight: 300; margin-top: 5px;}
@@ -150,12 +161,15 @@
 	#clip_btn>img{vertical-align: top; margin-top: 5px; margin-left: 5px;}
 	footer{width: 100%; height: 190px;}
 	#footer_top{width: 100%; height: 46px; border-top: 1px solid #aaa; background-color: #f4f3f0;}
-	#footer_top_box{width: 960px; height: 100%; margin: auto; overflow: hidden;}
+	#footer_top_box{width: 960px; height: 100%; margin: auto; }
 	#footer_bottom{width: 100%; height: 144px; background-color: #444b55;}
 	#footer_bottom_box{width: 960px; height: 100%; margin: auto;}
 	#footer_top_box>ul>li{float: left; cursor: pointer;}
-	#footer_top_image_box{float: right; margin-top: 7px;}
+	#footer_top_image_box{float: right; margin-top: 7px; position: relative; }
 	#footer_top_image_box>img{float: left; margin-left: 10px; cursor: pointer;}
+	#footer_top_image_box>img:first-child{margin-left: 0;}
+	#footer_top_hover_list_left{width: 137px; background-color: #fff; border: 1px solid #eee; padding: 10px; box-sizing: border-box; position: absolute; bottom: 100%; left: 0; display: none;}
+	#footer_top_hover_list_right{width: 188px; background-color: #fff; border: 1px solid #eee; padding: 10px; box-sizing: border-box; position: absolute; bottom: 100%; right: 0; display: none;}
 	#footer_bottom_box>ul{float: left; font-size: 11px; font-weight: 100; color: #aaa; margin-top: 20px;}
 	#footer_bottom_box>ul>li{float: left; margin-right: 10px; cursor: pointer;}
 	#footer_bottom_box>ul>li:nth-child(n+4){color: #fff; font-weight: 400;}
@@ -235,7 +249,23 @@
 		<h2>※코로나 바이러스 감염증-19 관련 이용 안내</h2>
 	</div>
 <!----------new시작---------------------------------------------------------->
-	<div id="new"><!-- w1000  -->
+	<div id="new">
+		<div id="new_side_box">
+			<ul id="new_slide">
+				<li><p>What’s <br>
+					New <br>
+					신규 즐길거리</p></li>
+				<li><p>Promotion <br>
+					오늘의 할인</p></li>
+				<li><p>에버랜드 <br>
+					정보 꿀팁</p></li>
+				<li><p>Information <br>
+					운영정보</p></li>
+				<li><p>Editor’s <br>
+					Clip <br>
+					추천 꿀팁</p></li>
+			</ul>
+		</div><!-- w1000  -->
 			<div id="new_title">
 				<h2>What's New</h2>
 				<h4>꿈과 환상의 나라로 어서오세요!</h4>
@@ -524,7 +554,19 @@
 						<li><img src="icons/btn_sns_go06.gif" alt=""></li>
 					</ul>
 					<div id="footer_top_image_box">
-						<img src="icons/footer_flink_01_new.gif" alt=""><img src="icons/footer_flink_02_new.gif" alt="">
+						<img src="icons/footer_flink_01_new.gif" alt="" id="footer_top_image1"><img src="icons/footer_flink_02_new.gif" alt="" id="footer_top_image2">
+						<div id="footer_top_hover_list">
+							<ul id="footer_top_hover_list_left">
+							<li>교통박물관</li>
+							<li>호암미술관</li>
+							<li>글렌로스 골프클럽</li>
+						</ul>
+						<ul id="footer_top_hover_list_right">
+							<li>삼성물산 리조트부문</li>
+							<li>골프삼성</li>
+							<li>My Dog & SAMSUNG</li>
+							<li>서비스아카데미</li>
+						</ul></div>
 					</div>
 				</div>
 			</div>
