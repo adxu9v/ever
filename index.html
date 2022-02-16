@@ -45,10 +45,20 @@
 			  else if($(window).scrollTop()<800){$('#new_side_box').css({'position':'absolute','right':'20px'})
 			  $('#new_slide>li:nth-child(1)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#fff','color':'#000'})}
 		  })
+		  $('#pop_close').click(function(){
+			  $('#pop_hidden_box').slideUp();
+		  })
 	  })
   </script>
   <style>
-	* { margin: 0; padding: 0; list-style: none; }
+	* { margin: 0; padding: 0; list-style: none;}
+	#pop{background-color: #fefad4;}
+	#pop_hidden_box{width: 960px; height: 103px; margin: auto; position: relative;}
+	#pop_hidden_img{width: 100%;}
+	#pop_hidden_box>p{width: 200px; height: 25px; line-height: 25px; position: absolute; bottom: 10px; right: 0;}
+	#pop_hidden_box>p>input{vertical-align: middle;}
+	#pop_hidden_box>p>img{vertical-align: middle;}
+	#pop_close{}
 	#header1{width: 100%; height: 38px; border-bottom: 1px solid #aaa; background-color: #f5f5f5;}
 	#header1_box{width: 960px; height: 38px; margin: auto;}
 	#logo{width: 160px; height: 38px; float: left; cursor: pointer;}
@@ -68,7 +78,7 @@
 	#header2_right>ul>li>h5::after{content: "|"; margin: 0 5px;}
 	#header2_right>ul>li:last-child>h5::after{content: ""; margin-left: 0;}
 	#header3{width: 100%; height: 42px; border-bottom: 1px solid #000; position: relative;}
-	#header3_box{width: 960px; height: 42px; margin: auto;}
+	#header3_box{width: 960px; height: 42px; margin: auto; background-color: red;}
 	#header3_box>ul{width: 100%; text-align: center; line-height: 42px; }
 	#header3_box>ul>li{display: inline-block; padding: 0 5%; cursor: pointer;}
 	#header3_box>ul>li:hover{background-color: rgb(255, 94, 0); color: #fff;}
@@ -205,6 +215,17 @@
 	#footer_bottom_image_box>img{width: 70px; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto;}
 
   </style> </head> <body>
+	  <div id="pop">
+		  <div id="pop_hidden_box">
+			  <img src="images/img_top_banner.jpg" alt="" id="pop_hidden_img">
+				<p>
+					<input type="checkbox">1일간 열지않음
+					<img src="icons/KakaoTalk_20220216_121510124.jpg" alt="" id="pop_close">
+				</p>
+			</div>
+		 
+		  
+	  </div>
   <!-----header시작---------------------------------------------------------->
 		<header> 
 				<div id="header1"><!-- w100% h38 bdb -->
@@ -237,11 +258,52 @@
 				<div id="header3"><!-- w100% h42 bdb -->
 							<div id="header3_box"><!-- w1000 h42 m:a -->
 								<ul>
-									<li>이용정보</li>
-									<li>할인&이벤트</li>
-									<li>즐길거리</li>
-									<li>멤버십</li>
-									<li>에버랜드 더 알아보기</li>
+									<li>이용정보
+										<ul>
+											<li>이용방법</li>
+											<li>이용요금</li>
+											<li>제휴카드</li>
+											<li>운영시간</li>
+											<li>운휴안내</li>
+											<li>교통정보</li>
+											<li>편의시설</li>
+											<li>가이드맵</li>
+											<li>모바일앱</li>
+										</ul>
+									</li>
+									<li>할인&이벤트
+										<ul>
+											<li>뉴스공지</li>
+											<li>할인정보</li>
+											<li>스페셜 패키지</li>
+											<li>참여 이벤트</li>
+											<li>체험 프로그램</li>
+										</ul>
+									</li>
+									<li>즐길거리
+										<ul>
+											<li>추천 코스</li>
+											<li>어트랙션</li>
+											<li>엔터테인먼트</li>
+											<li>주토피아(동물원)</li>
+											<li>플랜토피아(정원)</li>
+											<li>레스토랑</li>
+											<li>선물샵 | MD 쇼핑몰</li>
+											<li>글램핑</li>
+										</ul>
+									</li>
+									<li>멤버십 <ul>
+										<li>연간 이용권</li>
+										<li>시즌 이용권</li>
+										<li>스피드웨이</li>
+										<li>동물사랑단</li>
+										<li>식물사랑단</li>
+									</ul></li>
+									<li>에버랜드 더 알아보기 <ul>
+										<li>Editop's Pick</li>
+										<li>에버랜드 스토리</li>
+										<li>에버랜드 테마뮤직</li>
+									</ul></li>
 								</ul>
 								
 							</div>
