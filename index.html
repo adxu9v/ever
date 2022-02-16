@@ -78,9 +78,9 @@
 	#header2_right>ul>li>h5::after{content: "|"; margin: 0 5px;}
 	#header2_right>ul>li:last-child>h5::after{content: ""; margin-left: 0;}
 	#header3{width: 100%; height: 42px; border-bottom: 1px solid #000; position: relative;}
-	#header3_box{width: 960px; height: 42px; margin: auto; background-color: red;}
+	#header3_box{width: 960px; height: 42px; margin: auto;}
 	#header3_box>ul{width: 100%; text-align: center; line-height: 42px; }
-	#header3_box>ul>li{display: inline-block; padding: 0 5%; cursor: pointer;}
+	#header3_box>ul>li{display: inline-block; cursor: pointer; background-color: red; vertical-align: top;}
 	#header3_box>ul>li:hover{background-color: rgb(255, 94, 0); color: #fff;}
 	#header3>img{width: 24px; position: absolute; right: 35px; top: 0; bottom: 0; margin: auto;}
 	#slide{width: 100%; height: auto; background: url(images/slide3_bg.jpg) 0 center no-repeat; background-size: cover; border: 1px solid #000; cursor: pointer;}
@@ -259,7 +259,7 @@
 							<div id="header3_box"><!-- w1000 h42 m:a -->
 								<ul>
 									<li>이용정보
-										<ul>
+										<ul class="">
 											<li>이용방법</li>
 											<li>이용요금</li>
 											<li>제휴카드</li>
