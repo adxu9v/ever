@@ -57,43 +57,29 @@ $(document).ready(function(){
 		  $('#header3_box>ul').mouseleave(function(){
 			$('.nav_hidden,#nav_bg').hide()
 		})
+		$('#slide_btn>ul>li').click(function(){
+			$('#slide_box').animate({'left':$(this).index()*-100+'%'})
+		})
 		  slideBtn.click(function(){
 			$(this).css({'background-color':'red'}),
 			$(this).siblings().css({'background-color':'rgba(255,255,255,0.3)'})
 			slideBtnStop.click(function(){
 				$(this).css({'transform':'transformX(20px)'})
+				
 			})
 		  })
+		  let num = 0;
+		  setInterval(function(){
+			  num = num-100
+			  if(num <= -700){num=0}
+			$('#slide_box').animate({'left':+num+'%'})
+		  },3000)
 		  $('#footer_top_image1').click(function(){
 			  $('#footer_top_hover_list_left').toggle();
 		  })
 		  $('#footer_top_image2').click(function(){
 			  $('#footer_top_hover_list_right').toggle();
 		  })
-		//   $(window).scroll(function(){
-		// 	  if($(window).scrollTop()>1000){
-		// 		  $('#new_side_box').css({'position':'fixed','top':'100px', 'right':'20px'})
-				  
-		// 	  }
-		// 	  if($(this).scrollTop() > 1200 && $(this).scrollTop() < 1800){
-		// 		$('#new_slide>li:nth-child(2)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#ddd','color':'#000'})
-		// 	  }
-		// 	  if($(this).scrollTop() > 1800 && $(this).scrollTop() < 2000){
-		// 		$('#new_slide>li:nth-child(3)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#ddd','color':'#000'})
-		// 	  }
-		// 	  if($(this).scrollTop() > 2000 && $(this).scrollTop() < 2300){
-		// 		$('#new_slide>li:nth-child(3)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#ddd','color':'#000'})
-		// 	  }
-		// 	  if($(this).scrollTop() > 2300 && $(this).scrollTop() < 3000){
-		// 		$('#new_slide>li:nth-child(4)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#ddd','color':'#000'})
-		// 	  }
-		// 	  if($(this).scrollTop() > 3000){
-		// 		$('#new_slide>li:nth-child(5)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#ddd','color':'#000'})
-		// 	  }
-
-		// 	  else if($(window).scrollTop()<1000){$('#new_side_box').css({'position':'absolute','right':'20px'})
-		// 	  $('#new_slide>li:nth-child(1)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#ddd','color':'#000'})}
-		//   })
 		  $('#pop_close').click(function(){
 			  $('#pop_hidden_box').slideUp();
 		  })
