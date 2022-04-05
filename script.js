@@ -15,7 +15,7 @@ $(document).ready(function(){
 			 let editorsc = $('#editor').offset().top
 			 $('#sc').html(sc)
 			 $('#sc2').html(ticketsc)
-			 if(0<sc && sc<newsc){$('#new_side_box').css({'position':'absolute','top':'1000px','right':'-140px'})}
+			 if(0<sc && sc<newsc){$('#new_side_box').css({'position':'absolute','top':'1000px','right':'20px'})}
 			if(newsc<=sc && sc<ticketsc){$('#new_slide>li:nth-child(1)').css({'background-color':'rgb(255, 94, 0)','color':'#fff'}).siblings('li').css({'background-color':'#eee','color':'#000'})
 				$('#new_side_box').css({'position':'fixed','top':'100px','right':'20px'})}
 			if(ticketsc<=sc && sc<funsc){
@@ -57,11 +57,11 @@ $(document).ready(function(){
 		  $('#header3_box>ul').mouseleave(function(){
 			$('.nav_hidden,#nav_bg').hide()
 		})
-		$('#slide_btn>ul>li').click(function(){
+		$('#slide_btn>ul>li:not(#slide_btn>ul>li:first-child)').click(function(){
 			$('#slide_box').animate({'left':$(this).index()*-100+'%'})
 		})
 		  slideBtn.click(function(){
-			$(this).css({'background-color':'red'}),
+			$(this).css({'background-color':'red'});
 			$(this).siblings().css({'background-color':'rgba(255,255,255,0.3)'})
 			slideBtnStop.click(function(){
 				$(this).css({'transform':'transformX(20px)'})
@@ -69,10 +69,13 @@ $(document).ready(function(){
 			})
 		  })
 		  let num = 0;
+		  let speed = 100;
+		  let stop = 0;
 		  setInterval(function(){
-			  num = num-100
-			  if(num <= -700){num=0}
-			$('#slide_box').animate({'left':+num+'%'})
+			  num = num - speed
+			  if(num <= -800){num=0}
+			$('#slide_box').stop().animate({'left':+num+'%'})
+			$('#slide_btn>ul>li:nth-child('+((num*-0.01)+2)+')').stop().css({'background-color':'red'}).siblings().css({'background-color':'rgba(255,255,255,0.3)'})
 		  },3000)
 		  $('#footer_top_image1').click(function(){
 			  $('#footer_top_hover_list_left').toggle();
@@ -88,6 +91,10 @@ $(document).ready(function(){
 		  })
 		  $('#header3_box>ul').mouseleave(function(){
 			  $('.nav_hidden').stop().css({'display':'none'})
+		  })
+		  $('#slide_btn_stop').click(function(){
+			 if(stop == 0){stop = 1; speed = 0;}
+			 else if(stop == 1){stop = 0; speed = 100;}
 		  })
 	  })
   
